@@ -4,19 +4,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RoutingContext } from 'react-router';
 
-import AppComponent from './components/app';
-import IndexComponent from './components/index';
-
-const myAppRoutes = {
-    path: '',
-    component: AppComponent,
-    childRoutes: [
-        {
-            path: '/',
-            component: IndexComponent
-        }
-    ]
-};
+import { routes } from './routes';
 
 const app = express();
 
@@ -26,7 +14,7 @@ app.set('view engine', 'ejs');
 app.get('*', (req, res) => {
     // routes is our object of React routes defined above
 
-    match({ routes: myAppRoutes, location: req.url }, (err, redirectLocation, props) => {
+    match({ routes, location: req.url }, (err, redirectLocation, props) => {
         if (err) {
             // something went badly wrong, so 500 with a message
             res.status(500).send(err.message);

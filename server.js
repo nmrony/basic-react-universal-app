@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 app.get('*', (req, res) => {
     // routes is our object of React routes defined above
-
+    console.log('server hit for %s', req.url);
     match({ routes, location: req.url }, (err, redirectLocation, props) => {
         if (err) {
             // something went badly wrong, so 500 with a message

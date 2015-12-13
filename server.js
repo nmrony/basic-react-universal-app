@@ -8,6 +8,17 @@ import { routes } from './routes';
 
 const app = express();
 
+/**
+ * Bug in material ui
+ * https://github.com/callemall/material-ui/pull/2172#issuecomment-157404901
+ */
+app.use(function(req, res, next) {
+  global.navigator = {
+    userAgent: req.headers['user-agent']
+  };
+  next();
+});
+
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 

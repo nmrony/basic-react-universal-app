@@ -185,5 +185,5 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 
-public
+public/build.js
 

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack . && babel-node server.js",
-    "gp": "git add --all && git push origin master"
+    "gcp": "git add --all && git commit && git push -u origin master"
   },
   "keywords": [],
   "author": "Nur Rony <pro.nmrony@gmail.com> (https://nurmrony.wordpress.com/)",

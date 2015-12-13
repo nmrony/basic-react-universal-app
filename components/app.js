@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-const  AppBar = require('material-ui/lib/app-bar');
-const FlatButton = require('material-ui/lib/flat-button');
+import  AppBar from 'material-ui/lib/app-bar';
+import FlatButton from 'material-ui/lib/flat-button';
 
 export default class AppComponent extends React.Component {
   render() {

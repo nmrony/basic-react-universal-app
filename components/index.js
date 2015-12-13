@@ -8,20 +8,13 @@ import CardTitle from 'material-ui/lib/card/card-title';
 
 export default class IndexComponent extends React.Component {
   render() {
-    const cardStyle = {
-      margin: '10px  auto',
-      width: '60%'
-    };
-
     return (
-      <Card style={cardStyle}>
+      <Card className="card">
         <CardTitle title="Welcome to App" subtitle="Come and embrace the awesomeness with React" />
         <CardText>
-
           <CardMedia>
             <img src="/images/react.svg" height="300" width="300"/>
           </CardMedia>
-
         </CardText>
       </Card>
     );

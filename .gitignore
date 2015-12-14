@@ -185,5 +185,6 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 
-public/build.js
+public/app.js
+public/vendor.bundle.js
 

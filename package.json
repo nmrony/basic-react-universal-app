@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -f ./public/build.js && webpack . && babel-node server.js",
+    "start": "rm -f ./public/*.js && webpack && babel-node server.js",
     "gcp": "git add --all && git commit && git push -u origin master"
   },
   "keywords": [],
